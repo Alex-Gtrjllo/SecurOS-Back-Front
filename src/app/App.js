@@ -466,7 +466,7 @@ class App extends Component {
                             </div>
                         </div>
                         {/* aqui inicia la tabla */}
-                        <div className="col s7">
+                        {/* <div className="col s7">
                             <table>
                                 <thead>
                                     <tr>
@@ -505,7 +505,7 @@ class App extends Component {
                                 </tbody>
                                 
                             </table>
-                        </div>
+                        </div> */}
                         {/* aqui finaliza la tabla  */}
                     </div>
                 </div>
