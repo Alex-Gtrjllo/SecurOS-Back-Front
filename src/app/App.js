@@ -609,7 +609,8 @@ class App extends Component {
                                         <input name="canales_audio_mcc" onChange={this.handleChange} placeholder="Ingrese cantidad" value={this.state.canales_audio_mcc} type="number"></input>
                                     </div>
                                     <div className="input-field col s6">
-                                        <input name="canales_dispositivos_sip" onChange={this.handleChange} placeholder="Canales de Dispositivos SIP" value={this.state.canales_dispositivos_sip} type="number"></input>
+                                        <label>Canales de Dispositivos SIP</label>
+                                        <input name="canales_dispositivos_sip" onChange={this.handleChange} placeholder="Ingrese cantidad" value={this.state.canales_dispositivos_sip} type="number"></input>
                                     </div>
                                     <div className="input-field col s6">
                                         <label>Módulo de Integración con Control de Acceso (1 por sistema)</label>
