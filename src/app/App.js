@@ -268,9 +268,6 @@ class App extends Component {
                     </div>
 
                 </nav>
-                <div>
-                    <img src="./Resources/safe-city.png"></img>
-                </div>
                 <div className="container">
                     <div>
                         <div>
