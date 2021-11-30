@@ -17,6 +17,40 @@ class App extends Component {
             edicion: '',
             idioma: '',
             rol: '',
+            camaras_fisicas: '',
+            cantidad_flujos_video: '',
+            archiver: '',
+            canales_audio: '',
+            canales_altavoces: '',
+            canales_video_mcc: '',
+            canales_analitico_mcc: '',
+            canales_audio_mcc: '',
+            canales_dispositivos_sip: '',
+            modulo_integracion_control_acceso: '',
+            integracion_videowall: '',
+            servidor_rtsp: '',
+            servidor_onvif: '',
+            securos_reports: '',
+            integracion_punto_venta_atm: '',
+            cantidad_servidores_activos: '',
+            cantidad_servidores_failover: '',
+            licencias_httpeventgate: '',
+            licencias_iidk: '',
+            licencias_punto_integracion: '',
+            licencias_rest_api: '',
+            licencia_active_mediakit: '',
+            lectura_placas_baja_velocidad: '',
+            lectura_placas_alta_velocidad: '',
+            deteccion_marca_color: '',
+            lectura_contenedores_securos: '',
+            deteccion_intrusion: '',
+            deteccion_humo: '',
+            licencia_tracking: '',
+            clasificacion_persona_vehiculo_animal: '',
+            detector_casco_personas: '',
+            reconocimiento_facial: '',
+            deteccion_mascara_cubrebocas: '',
+            integracion_reconocimiento_facial: '',
             tasks: [],
             _id: ''
         };
@@ -38,7 +72,40 @@ class App extends Component {
             .then(data => {
                 console.log(data);
                 M.toast({html: 'Tarea actualizada'});
-                this.setState({solicitud_licencia: '', licencia: '', versiones: '', edicion: '', idioma: '', rol: '', _id: ''});
+                this.setState({solicitud_licencia: '', licencia: '', versiones: '', edicion: '', idioma: '', rol: '', camaras_fisicas: '',
+                cantidad_flujos_video: '',
+                archiver: '',
+                canales_audio: '',
+                canales_altavoces: '',
+                canales_video_mcc: '',
+                canales_analitico_mcc: '',
+                canales_audio_mcc: '',
+                canales_dispositivos_sip: '',
+                modulo_integracion_control_acceso: '',
+                integracion_videowall: '',
+                servidor_rtsp: '',
+                servidor_onvif: '',
+                securos_reports: '',
+                integracion_punto_venta_atm: '',
+                cantidad_servidores_activos: '',
+                cantidad_servidores_failover: '',
+                licencias_httpeventgate: '',
+                licencias_iidk: '',
+                licencias_punto_integracion: '',
+                licencias_rest_api: '',
+                licencia_active_mediakit: '',
+                lectura_placas_baja_velocidad: '',
+                lectura_placas_alta_velocidad: '',
+                deteccion_marca_color: '',
+                lectura_contenedores_securos: '',
+                deteccion_intrusion: '',
+                deteccion_humo: '',
+                licencia_tracking: '',
+                clasificacion_persona_vehiculo_animal: '',
+                detector_casco_personas: '',
+                reconocimiento_facial: '',
+                deteccion_mascara_cubrebocas: '',
+                integracion_reconocimiento_facial: '', _id: ''});
                 this.fetchTask();
             });
         }else {
@@ -53,8 +120,41 @@ class App extends Component {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-                    M.toast({html: 'Task saved'})
-                    this.setState({solicitud_licencia: '', licencia: '', versiones: '', edicion: '', idioma: '', rol: '', _id: ''})
+                    M.toast({html: 'Datos guardados exitosamente'})
+                    this.setState({solicitud_licencia: '', licencia: '', versiones: '', edicion: '', idioma: '', rol: '', camaras_fisicas: '',
+                    cantidad_flujos_video: '',
+                    archiver: '',
+                    canales_audio: '',
+                    canales_altavoces: '',
+                    canales_video_mcc: '',
+                    canales_analitico_mcc: '',
+                    canales_audio_mcc: '',
+                    canales_dispositivos_sip: '',
+                    modulo_integracion_control_acceso: '',
+                    integracion_videowall: '',
+                    servidor_rtsp: '',
+                    servidor_onvif: '',
+                    securos_reports: '',
+                    integracion_punto_venta_atm: '',
+                    cantidad_servidores_activos: '',
+                    cantidad_servidores_failover: '',
+                    licencias_httpeventgate: '',
+                    licencias_iidk: '',
+                    licencias_punto_integracion: '',
+                    licencias_rest_api: '',
+                    licencia_active_mediakit: '',
+                    lectura_placas_baja_velocidad: '',
+                    lectura_placas_alta_velocidad: '',
+                    deteccion_marca_color: '',
+                    lectura_contenedores_securos: '',
+                    deteccion_intrusion: '',
+                    deteccion_humo: '',
+                    licencia_tracking: '',
+                    clasificacion_persona_vehiculo_animal: '',
+                    detector_casco_personas: '',
+                    reconocimiento_facial: '',
+                    deteccion_mascara_cubrebocas: '',
+                    integracion_reconocimiento_facial: '', _id: ''})
                     this.fetchTask();
                 })
                 .catch(err => console.error(err));
@@ -89,7 +189,7 @@ class App extends Component {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                M.toast({html: 'Tarea eliminada'})
+                M.toast({html: 'Licencia eliminada'})
                 this.fetchTask();
             });
         }
@@ -107,6 +207,40 @@ class App extends Component {
                     edicion: data.edicion,
                     idioma: data.idioma,
                     rol: data.rol,
+                    camaras_fisicas: data.camaras_fisicas,
+                    cantidad_flujos_video: data.cantidad_flujos_video,
+                    archiver: data.archiver,
+                    canales_audio: data.canales_audio,
+                    canales_altavoces: data.canales_altavoces,
+                    canales_video_mcc: data.canales_video_mcc,
+                    canales_analitico_mcc: data.canales_analitico_mcc,
+                    canales_audio_mcc: data.canales_analitico_mcc,
+                    canales_dispositivos_sip: data.canales_dispositivos_sip,
+                    modulo_integracion_control_acceso: data.modulo_integracion_control_acceso,
+                    integracion_videowall: data.integracion_videowall,
+                    servidor_rtsp: data.servidor_rtsp,
+                    servidor_onvif: data.servidor_onvif,
+                    securos_reports: data.securos_reports,
+                    integracion_punto_venta_atm: data.integracion_punto_venta_atm,
+                    cantidad_servidores_activos: data.cantidad_servidores_activos,
+                    cantidad_servidores_failover: data.cantidad_servidores_failover,
+                    licencias_httpeventgate: data.licencias_httpeventgate,
+                    licencias_iidk: data.licencias_iidk,
+                    licencias_punto_integracion: data.licencias_punto_integracion,
+                    licencias_rest_api: data.licencias_rest_api,
+                    licencia_active_mediakit: data.licencia_active_mediakit,
+                    lectura_placas_baja_velocidad: data.lectura_placas_baja_velocidad,
+                    lectura_placas_alta_velocidad: data.lectura_placas_alta_velocidad,
+                    deteccion_marca_color: data.deteccion_marca_color,
+                    lectura_contenedores_securos: data.lectura_contenedores_securos,
+                    deteccion_intrusion: data.deteccion_intrusion,
+                    deteccion_humo: data.deteccion_humo,
+                    licencia_tracking: data.licencia_tracking,
+                    clasificacion_persona_vehiculo_animal: data.clasificacion_persona_vehiculo_animal,
+                    detector_casco_personas: data.detector_casco_personas,
+                    reconocimiento_facial: data.reconocimiento_facial,
+                    deteccion_mascara_cubrebocas: data.deteccion_mascara_cubrebocas,
+                    integracion_reconocimiento_facial: data.integracion_reconocimiento_facial,
                     _id: data._id
                 })
             });
@@ -137,332 +271,432 @@ class App extends Component {
                                 <div className="card-content">
                                     <form onSubmit={this.addTask}>
                                         {/* columna */}
-                                        <div className="row">
-                                            {/* <div className="input-field col s12">
-                                                <input name="title" onChange={this.handleChange} type="text" placeholder="Task Title" value={this.state.title}></input>
-                                            </div> */}
-                                            <Select
-                                            id="1"
-                                            name="solicitud_licencia"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            value={this.state.solicitud_licencia}
-                                            type="text"
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}                                        
-                                            >
-                                                <option
-                                                    disabled
-                                                    value=""
-                                                    selected
+                                        <div className="row">                                                                                       
+                                            <div className="col s12">
+                                                <Select
+                                                    id="1"
+                                                    name="solicitud_licencia"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    value={this.state.solicitud_licencia}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}                                        
                                                 >
-                                                    Escoga su tipo de solicitud de licencia
-                                                </option>
-                                                <option value="Nuevo Proyecto" >
-                                                    Nuevo Proyecto
-                                                </option>
-                                                <option value="Nueva Prueba de Concepto">
-                                                    Nueva Prueba de Concepto
-                                                </option>
-                                                <option value="Curso/Certificación">
-                                                    Curso/Certificación
-                                                </option>
-                                                <option value="Pendiente de Pago">
-                                                    Pendiente de Pago
-                                                </option>
-                                                <option value="Cambio de código">
-                                                    Cambio de código
-                                                </option>
-                                            </Select>
-                                        <Select
-                                            id="2"
-                                            name="licencia"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}
-                                        value=""
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                            >
-                                                Escoga su tipo de licencia
-                                            </option>
-                                            <option value="Permanente">
-                                                Permanente
-                                            </option>
-                                            <option value="Temporal">
-                                                Temporal
-                                            </option>
-                                            <option value="Demo Kit">
-                                                Demo Kit
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="3"
-                                            name="versiones"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}
-                                        value=""
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                            >
-                                                Escoga su versión
-                                            </option>
-                                            <option value="8.x">
-                                                8.x
-                                            </option>
-                                            <option value="9.x">
-                                                9.x
-                                            </option>
-                                            <option value="10">
-                                                10
-                                            </option>
-                                            <option value="11">
-                                                11
-                                            </option>
-                                            <option value="10.1">
-                                                10.1
-                                            </option>
-                                            <option value="10.2">
-                                                10.2
-                                            </option>
-                                            <option value="10.3">
-                                                10.3
-                                            </option>
-                                            <option value="10.4">
-                                                10.4
-                                            </option>
-                                            <option value="10.5">
-                                                10.5
-                                            </option>
-                                            <option value="10.6">
-                                                10.6
-                                            </option>
-                                            <option value="10.7">
-                                                10.7
-                                            </option>
-                                            <option value="10.8">
-                                                10.8
-                                            </option>
-                                            <option value="10.9">
-                                                10.9
-                                            </option>
-                                            <option value="10.10">
-                                                10.10
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="4"
-                                            name="edicion"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}
-                                        value=""
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                            >
-                                                Escoge tu edición
-                                            </option>
-                                            <option value="Xpress">
-                                                Xpress
-                                            </option>
-                                            <option value="Profesional">
-                                                Profesional
-                                            </option>
-                                            <option value="Premium">
-                                                Premium
-                                            </option>
-                                            <option value="Enterprise">
-                                                Enterprise
-                                            </option>
-                                            <option value="MCC">
-                                                MCC
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="5"
-                                            name="idioma"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}
-                                        value=""
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                            >
-                                                Escoga su idioma
-                                            </option>
-                                            <option value="English">
-                                                English
-                                            </option>
-                                            <option value="Spanish">
-                                                Spanish
-                                            </option>
-                                            <option value="Russian">
-                                                Russian
-                                            </option>
-                                            <option value="Japanese">
-                                                Japanese
-                                            </option>
-                                            <option value="Turkish">
-                                                Turkish
-                                            </option>
-                                            <option value="Ukranian">
-                                                Ukranian
-                                            </option>
-                                            <option value="Chinese">
-                                                Chinese
-                                            </option>
-                                            <option value="Portuguese BR">
-                                                Portuguese BR
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="6"
-                                            name="rol"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                alignment: 'left',
-                                                autoTrigger: true,
-                                                closeOnClick: true,
-                                                constrainWidth: true,
-                                                coverTrigger: true,
-                                                hover: false,
-                                                inDuration: 150,
-                                                onCloseEnd: null,
-                                                onCloseStart: null,
-                                                onOpenEnd: null,
-                                                onOpenStart: null,
-                                                outDuration: 250
-                                                }
-                                            }}
-                                        value=""
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                            >
-                                                Escoga sus roles
-                                            </option>
-                                            <option value="Servidor de Configuración">
-                                                Servidor de Configuración
-                                            </option>
-                                            <option value="Servidor Periférico">
-                                                Servidor Periférico
-                                            </option>
-                                            <option value="Servido de Failover">
-                                            Servido de Failover
-                                            </option>
-                                        </Select>
-                                        </div>                                 
-                                        
-                                        <div className="input-field col s12">
-                                            <select>
-                                                <option >Option 1</option>
-                                                <option value="2">Option 2</option>
-                                                <option value="3">Option 3</option>
-                                            </select>
-                                        </div>
-                                        {/* segunda columna */}
-                                        {/* <div className="row">
-                                            <div className="input-field col s12">
-                                                <textarea name="description" onChange={this.handleChange} placeholder="Task Description" value={this.state.description} className="materialize-textarea"></textarea>
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoga su tipo de solicitud de licencia
+                                                    </option>
+                                                    <option value="Nuevo Proyecto" >
+                                                        Nuevo Proyecto
+                                                    </option>
+                                                    <option value="Nueva Prueba de Concepto">
+                                                        Nueva Prueba de Concepto
+                                                    </option>
+                                                    <option value="Curso/Certificación">
+                                                        Curso/Certificación
+                                                    </option>
+                                                    <option value="Pendiente de Pago">
+                                                        Pendiente de Pago
+                                                    </option>
+                                                    <option value="Cambio de código">
+                                                        Cambio de código
+                                                    </option>
+                                                </Select>
+                                                <Select
+                                                    id="2"
+                                                    name="licencia"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}
+                                                value={this.state.licencia}
+                                                >
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoga su tipo de licencia
+                                                    </option>
+                                                    <option value="Permanente">
+                                                        Permanente
+                                                    </option>
+                                                    <option value="Temporal">
+                                                        Temporal
+                                                    </option>
+                                                    <option value="Demo Kit">
+                                                        Demo Kit
+                                                    </option>
+                                                </Select>
+                                                <Select
+                                                    id="3"
+                                                    name="versiones"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}
+                                                value={this.state.versiones}
+                                                >
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoga su versión
+                                                    </option>
+                                                    <option value="8.x">
+                                                        8.x
+                                                    </option>
+                                                    <option value="9.x">
+                                                        9.x
+                                                    </option>
+                                                    <option value="10">
+                                                        10
+                                                    </option>
+                                                    <option value="11">
+                                                        11
+                                                    </option>
+                                                    <option value="10.1">
+                                                        10.1
+                                                    </option>
+                                                    <option value="10.2">
+                                                        10.2
+                                                    </option>
+                                                    <option value="10.3">
+                                                        10.3
+                                                    </option>
+                                                    <option value="10.4">
+                                                        10.4
+                                                    </option>
+                                                    <option value="10.5">
+                                                        10.5
+                                                    </option>
+                                                    <option value="10.6">
+                                                        10.6
+                                                    </option>
+                                                    <option value="10.7">
+                                                        10.7
+                                                    </option>
+                                                    <option value="10.8">
+                                                        10.8
+                                                    </option>
+                                                    <option value="10.9">
+                                                        10.9
+                                                    </option>
+                                                    <option value="10.10">
+                                                        10.10
+                                                    </option>
+                                                </Select>
+                                                <Select
+                                                    id="4"
+                                                    name="edicion"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}
+                                                value={this.state.edicion}
+                                                >
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoge tu edición
+                                                    </option>
+                                                    <option value="Xpress">
+                                                        Xpress
+                                                    </option>
+                                                    <option value="Profesional">
+                                                        Profesional
+                                                    </option>
+                                                    <option value="Premium">
+                                                        Premium
+                                                    </option>
+                                                    <option value="Enterprise">
+                                                        Enterprise
+                                                    </option>
+                                                    <option value="MCC">
+                                                        MCC
+                                                    </option>
+                                                </Select>
+                                                <Select
+                                                    id="5"
+                                                    name="idioma"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}
+                                                value={this.state.idioma}
+                                                >
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoga su idioma
+                                                    </option>
+                                                    <option value="English">
+                                                        English
+                                                    </option>
+                                                    <option value="Spanish">
+                                                        Spanish
+                                                    </option>
+                                                    <option value="Russian">
+                                                        Russian
+                                                    </option>
+                                                    <option value="Japanese">
+                                                        Japanese
+                                                    </option>
+                                                    <option value="Turkish">
+                                                        Turkish
+                                                    </option>
+                                                    <option value="Ukranian">
+                                                        Ukranian
+                                                    </option>
+                                                    <option value="Chinese">
+                                                        Chinese
+                                                    </option>
+                                                    <option value="Portuguese BR">
+                                                        Portuguese BR
+                                                    </option>
+                                                </Select>
+                                                <Select
+                                                    id="6"
+                                                    name="rol"
+                                                    multiple={false}
+                                                    onChange={this.handleChange}
+                                                    options={{
+                                                        classes: '',
+                                                        dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                        }
+                                                    }}
+                                                value={this.state.rol}
+                                                >
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                        defaultChecked
+                                                    >
+                                                        Escoga sus roles
+                                                    </option>
+                                                    <option value="Servidor de Configuración">
+                                                        Servidor de Configuración
+                                                    </option>
+                                                    <option value="Servidor Periférico">
+                                                        Servidor Periférico
+                                                    </option>
+                                                    <option value="Servido de Failover">
+                                                        Servido de Failover
+                                                    </option>
+                                                </Select>
                                             </div>
-                                        </div> */}
+                                            
+                                        </div>                                          
                                         <button type="submit" className="btn light-blue darken-4">
                                             Registrar
                                         </button>
                                     </form>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="col s7">
+                            {/* <div className="input-field col s6">
+                                <input name="title" onChange={this.handleChange} type="text" placeholder="Task Title" value={this.state.title}></input>
+                            </div> */}
+                            {/* segunda columna */}
+                            <div className="row">
+                                <div className="input-field col s4">
+                                    <textarea id="textarea" rows="20" name="camaras_fisicas" onChange={this.handleChange} placeholder="Cámaras físicas (licencia por IP)" value={this.state.camaras_fisicas} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="cantidad_flujos_video" onChange={this.handleChange} placeholder="Cantidad de flujos de video (1 por imagen):" value={this.state.cantidad_flujos_video} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="archiver" onChange={this.handleChange} placeholder="Archiver (1 por servidor):" value={this.state.archiver} className="materialize-textarea"></textarea>
+                                </div>       
+                                <div className="input-field col s4">
+                                    <textarea name="canales_audio" onChange={this.handleChange} placeholder="Canales de Audio (1 por micrófono):" value={this.state.canales_audio} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="canales_altavoces" onChange={this.handleChange} placeholder="Canales de Altavoces (1 por altavoz)" value={this.state.canales_altavoces} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="canales_video_mcc" onChange={this.handleChange} placeholder="Canales de Video MCC (suma de flujos de video de todos los sitios)" value={this.state.canales_video_mcc} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="canales_analitico_mcc" onChange={this.handleChange} placeholder="Canales de Analíticos en MCC (suma de analíticos de todos los sitios)" value={this.state.canales_analitico_mcc} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="canales_audio_mcc" onChange={this.handleChange} placeholder="Canales de Audio en MCC (suma de micrófonos de todos los sitios)" value={this.state.canales_audio_mcc} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="canales_dispositivos_sip" onChange={this.handleChange} placeholder="Canales de Dispositivos SIP" value={this.state.canales_dispositivos_sip} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="modulo_integracion_control_acceso" onChange={this.handleChange} placeholder="Módulo de Integración con Control de Acceso (1 por sistema)" value={this.state.modulo_integracion_control_acceso} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="integracion_videowall" onChange={this.handleChange} placeholder="Integración con Videowall (1 por videowall)" value={this.state.integracion_videowall} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="servidor_rtsp" onChange={this.handleChange} placeholder="Servidor RTSP (1 por flujo de video)" value={this.state.servidor_rtsp} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="servidor_onvif" onChange={this.handleChange} placeholder="Servidor ONVIF (1 por flujo de video)" value={this.state.servidor_onvif} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="securos_reports" onChange={this.handleChange} placeholder="SecurOS Reports (1 por workstation)" value={this.state.securos_reports} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="integracion_punto_venta_atm" onChange={this.handleChange} placeholder="Integración con Punto de Venta o ATM (1 por terminal)" value={this.state.integracion_punto_venta_atm} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="cantidad_servidores_activos" onChange={this.handleChange} placeholder="Cantidad de Servidores Activos (aplica con SecurOS Clúster)" value={this.state.cantidad_servidores_activos} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="cantidad_servidores_failover" onChange={this.handleChange} placeholder="Cantidad de Servidores de Failover (aplica con SecurOS Clúster)" value={this.state.cantidad_servidores_failover} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="licencias_httpeventgate" onChange={this.handleChange} placeholder="Licencias de HTTP Event Gate (1 por sistema externo)" value={this.state.licencias_httpeventgate} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="licencias_iidk" onChange={this.handleChange} placeholder="Licencias de IIDK (1 por sistema externo)" value={this.state.licencias_iidk} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="licencias_punto_integracion" onChange={this.handleChange} placeholder="Licencias de Punto de Integración (1 por sistema externo)" value={this.state.licencias_punto_integracion} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="licencias_rest_api" onChange={this.handleChange} placeholder="Licencias de Rest API (1 por sistema externo por servidor)" value={this.state.licencias_rest_api} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="licencia_active_mediakit" onChange={this.handleChange} placeholder="Licencia de Active Media Kit (1 por cliente)" value={this.state.licencia_active_mediakit} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="lectura_placas_baja_velocidad" onChange={this.handleChange} placeholder="Lectura de Placas de Baja Velocidad (1 por flujo de video)" value={this.state.lectura_placas_baja_velocidad} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="lectura_placas_alta_velocidad" onChange={this.handleChange} placeholder="Lectura de Placas de Alta Velocidad (1 por flujo de video)" value={this.state.lectura_placas_alta_velocidad} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="deteccion_marca_color" onChange={this.handleChange} placeholder="Detección de Marca, Color, Modelo para Lectura de Placas (1 por canal de LPR)" value={this.state.deteccion_marca_color} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="lectura_contenedores_securos" onChange={this.handleChange} placeholder="Lectura de Contenedores-SecurOS Cargo (1 por flujo de video)" value={this.state.lectura_contenedores_securos} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="deteccion_intrusion" onChange={this.handleChange} placeholder="Detección de Intrusión (1 por flujo de video)" value={this.state.deteccion_intrusion} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="deteccion_humo" onChange={this.handleChange} placeholder="Detección de Humo (1 por flujo de video)" value={this.state.deteccion_humo} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="licencia_tracking" onChange={this.handleChange} placeholder="Licencia de Tracking Kit (1 por flujo de video y canales simultáneos)" value={this.state.licencia_tracking} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="clasificacion_persona_vehiculo_animal" onChange={this.handleChange} placeholder="Clasificación de Persona, Vehículo, Animal (1 por flujo de video)" value={this.state.clasificacion_persona_vehiculo_animal} className="materialize-textarea"></textarea>
+                                </div> 
+                                <div className="input-field col s4">
+                                    <textarea name="detector_casco_personas" onChange={this.handleChange} placeholder="Detector de Casco en Personas (1 por flujo de video)" value={this.state.descridetector_casco_personasption} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="reconocimiento_facial" onChange={this.handleChange} placeholder="Reconocimiento Facial (1 por flujo de video)" value={this.state.reconocimiento_facial} className="materialize-textarea"></textarea>
+                                </div>
+                                <div className="input-field col s4">
+                                    <textarea name="deteccion_mascara_cubrebocas" onChange={this.handleChange} placeholder="Detección de Máscara/Cubrebocas (1 por canal de reconocimiento facial)" value={this.state.deteccion_mascara_cubrebocas} className="materialize-textarea"></textarea>
+                                </div>   
+                                <div className="input-field col s4">
+                                    <textarea name="integracion_reconocimiento_facial" onChange={this.handleChange} placeholder="Integración de Reconocimiento Facial con Control de Acceso (1 por canal de reconocimiento facial)" value={this.state.integracion_reconocimiento_facial} className="materialize-textarea"></textarea>
+                                </div>                        
                             </div>
                         </div>
                         {/* aqui inicia la tabla */}
