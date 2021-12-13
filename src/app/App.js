@@ -4,7 +4,7 @@ import React, { Component } from "react";
 
 import 'materialize-css';
 import { Card, Select } from 'react-materialize';
-import { Label } from "reactstrap";
+import { Label, CardImg} from "reactstrap";
 
 
 class App extends Component {
@@ -265,6 +265,7 @@ class App extends Component {
                 <nav className="light-blue darken-4">
                     <div className="container">
                         <a className="brand-logo" href="/">SecurOS </a>
+                        <img src="/Resources/iss-logo.svg" alt="imagen"></img>
                     </div>
 
                 </nav>
