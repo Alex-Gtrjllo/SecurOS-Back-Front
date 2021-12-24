@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const validations = require('../app/validators/validations')
+const yup = require('yup');
 
 const Task = require('../models/task')
 
@@ -14,7 +16,11 @@ router.get('/:id', async (req, res) => {
     res.json(task);
 })
 
-router.post('/', async (req, res) => {
+
+router.post('/', validations.validate(validations.createObjectValidators), async (req, res) => {
+    // validations.objectValidator(req.body);
+    // validations.createObjectValidators(req.body);
+    
     const { solicitud_licencia, licencia, versiones, edicion, idioma, rol, camaras_fisicas,
         cantidad_flujos_video,
         archiver,
@@ -49,6 +55,7 @@ router.post('/', async (req, res) => {
         reconocimiento_facial,
         deteccion_mascara_cubrebocas,
         integracion_reconocimiento_facial } = req.body;
+
     const task = new Task({solicitud_licencia, licencia, versiones, edicion, idioma, rol, camaras_fisicas,
         cantidad_flujos_video,
         archiver,
@@ -84,7 +91,7 @@ router.post('/', async (req, res) => {
         deteccion_mascara_cubrebocas,
         integracion_reconocimiento_facial})
     await task.save();
-    res.json({status: 'Task saved'});
+    res.json({status: 'Datos guardados'});
 })
 
 router.put('/:id', async (req, res) => {

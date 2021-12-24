@@ -264,318 +264,326 @@ class App extends Component {
                 {/* Navegacion */}
                 <nav className="light-blue darken-4">
                     <div className="container">
-                        <a className="brand-logo" href="/">SecurOS </a>
-                        <img src="/Resources/iss-logo.svg" alt="imagen"></img>
+                        <a className="brand-logo" href="/">Solicitud de Licencias </a>
                     </div>
-
                 </nav>
+                <div>
+                    <img src="/Resources/iss-logo.svg" alt="imagen" width="250" height="150"></img>
+                </div>
+                <h5 class="center-align">Tipo de solicitud y versión de SecurOS</h5>
+                <p></p>
                 <div className="container">
                     <div>
                         <div>
                             <form onSubmit={this.addTask}>
                                 {/* columna */}
+                           
                                 <div>
-                                    <div>
-                                        <Select
-                                            id="1"
-                                            name="solicitud_licencia"
-                                            label="Escoja su tipo de solicitud de licencia"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            value={this.state.solicitud_licencia}
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <Select
+                                                id="1"
+                                                name="solicitud_licencia"
+                                                label="Tipo de solicitud de licencia"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                value={this.state.solicitud_licencia}
 
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="Nuevo Proyecto" >
-                                                Nuevo Proyecto
-                                            </option>
-                                            <option value="Nueva Prueba de Concepto">
-                                                Nueva Prueba de Concepto
-                                            </option>
-                                            <option value="Curso/Certificación">
-                                                Curso/Certificación
-                                            </option>
-                                            <option value="Pendiente de Pago">
-                                                Pendiente de Pago
-                                            </option>
-                                            <option value="Cambio de código">
-                                                Cambio de código
-                                            </option>
-                                            <label>Materialize Select</label>
-                                        </Select>
-                                        <Select
-                                            id="2"
-                                            name="licencia"
-                                            label="Escoja su tipo de licencia"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                    alignment: 'left',
-                                                    autoTrigger: true,
-                                                    closeOnClick: true,
-                                                    constrainWidth: true,
-                                                    coverTrigger: true,
-                                                    hover: false,
-                                                    inDuration: 150,
-                                                    onCloseEnd: null,
-                                                    onCloseStart: null,
-                                                    onOpenEnd: null,
-                                                    onOpenStart: null,
-                                                    outDuration: 250
-                                                }
-                                            }}
-                                            value={this.state.licencia}
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="Nuevo Proyecto" >
+                                                    Nuevo Proyecto
+                                                </option>
+                                                <option value="Nueva Prueba de Concepto">
+                                                    Nueva Prueba de Concepto
+                                                </option>
+                                                <option value="Curso/Certificación">
+                                                    Curso/Certificación
+                                                </option>
+                                                <option value="Pendiente de Pago">
+                                                    Pendiente de Pago
+                                                </option>
+                                                <option value="Cambio de código">
+                                                    Cambio de código
+                                                </option>
+                                                <label>Materialize Select</label>
+                                            </Select>
+                                            <Select
+                                                id="2"
+                                                name="licencia"
+                                                label="Tipo de licencia"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                options={{
+                                                    classes: '',
+                                                    dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                    }
+                                                }}
+                                                value={this.state.licencia}
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="Permanente">
-                                                Permanente
-                                            </option>
-                                            <option value="Temporal">
-                                                Temporal
-                                            </option>
-                                            <option value="Demo Kit">
-                                                Demo Kit
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="3"
-                                            name="versiones"
-                                            label="Escoja su versión"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                    alignment: 'left',
-                                                    autoTrigger: true,
-                                                    closeOnClick: true,
-                                                    constrainWidth: true,
-                                                    coverTrigger: true,
-                                                    hover: false,
-                                                    inDuration: 150,
-                                                    onCloseEnd: null,
-                                                    onCloseStart: null,
-                                                    onOpenEnd: null,
-                                                    onOpenStart: null,
-                                                    outDuration: 250
-                                                }
-                                            }}
-                                            value={this.state.versiones}
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="Permanente">
+                                                    Permanente
+                                                </option>
+                                                <option value="Temporal">
+                                                    Temporal
+                                                </option>
+                                                <option value="Demo Kit">
+                                                    Demo Kit
+                                                </option>
+                                            </Select>
+                                            <Select
+                                                id="3"
+                                                name="versiones"
+                                                label="Versión"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                options={{
+                                                    classes: '',
+                                                    dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                    }
+                                                }}
+                                                value={this.state.versiones}
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="8.x">
-                                                8.x
-                                            </option>
-                                            <option value="9.x">
-                                                9.x
-                                            </option>
-                                            <option value="10">
-                                                10
-                                            </option>
-                                            <option value="11">
-                                                11
-                                            </option>
-                                            <option value="10.1">
-                                                10.1
-                                            </option>
-                                            <option value="10.2">
-                                                10.2
-                                            </option>
-                                            <option value="10.3">
-                                                10.3
-                                            </option>
-                                            <option value="10.4">
-                                                10.4
-                                            </option>
-                                            <option value="10.5">
-                                                10.5
-                                            </option>
-                                            <option value="10.6">
-                                                10.6
-                                            </option>
-                                            <option value="10.7">
-                                                10.7
-                                            </option>
-                                            <option value="10.8">
-                                                10.8
-                                            </option>
-                                            <option value="10.9">
-                                                10.9
-                                            </option>
-                                            <option value="10.10">
-                                                10.10
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="4"
-                                            name="edicion"
-                                            label="Escoge tu edición"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                    alignment: 'left',
-                                                    autoTrigger: true,
-                                                    closeOnClick: true,
-                                                    constrainWidth: true,
-                                                    coverTrigger: true,
-                                                    hover: false,
-                                                    inDuration: 150,
-                                                    onCloseEnd: null,
-                                                    onCloseStart: null,
-                                                    onOpenEnd: null,
-                                                    onOpenStart: null,
-                                                    outDuration: 250
-                                                }
-                                            }}
-                                            value={this.state.edicion}
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="8.x">
+                                                    8.x
+                                                </option>
+                                                <option value="9.x">
+                                                    9.x
+                                                </option>
+                                                <option value="10">
+                                                    10
+                                                </option>
+                                                <option value="11">
+                                                    11
+                                                </option>
+                                                <option value="10.1">
+                                                    10.1
+                                                </option>
+                                                <option value="10.2">
+                                                    10.2
+                                                </option>
+                                                <option value="10.3">
+                                                    10.3
+                                                </option>
+                                                <option value="10.4">
+                                                    10.4
+                                                </option>
+                                                <option value="10.5">
+                                                    10.5
+                                                </option>
+                                                <option value="10.6">
+                                                    10.6
+                                                </option>
+                                                <option value="10.7">
+                                                    10.7
+                                                </option>
+                                                <option value="10.8">
+                                                    10.8
+                                                </option>
+                                                <option value="10.9">
+                                                    10.9
+                                                </option>
+                                                <option value="10.10">
+                                                    10.10
+                                                </option>
+                                            </Select>
+                                            <Select
+                                                id="4"
+                                                name="edicion"
+                                                label="Edición"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                options={{
+                                                    classes: '',
+                                                    dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                    }
+                                                }}
+                                                value={this.state.edicion}
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="Xpress">
-                                                Xpress
-                                            </option>
-                                            <option value="Profesional">
-                                                Profesional
-                                            </option>
-                                            <option value="Premium">
-                                                Premium
-                                            </option>
-                                            <option value="Enterprise">
-                                                Enterprise
-                                            </option>
-                                            <option value="MCC">
-                                                MCC
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="5"
-                                            name="idioma"
-                                            label="Escoja su idioma"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                    alignment: 'left',
-                                                    autoTrigger: true,
-                                                    closeOnClick: true,
-                                                    constrainWidth: true,
-                                                    coverTrigger: true,
-                                                    hover: false,
-                                                    inDuration: 150,
-                                                    onCloseEnd: null,
-                                                    onCloseStart: null,
-                                                    onOpenEnd: null,
-                                                    onOpenStart: null,
-                                                    outDuration: 250
-                                                }
-                                            }}
-                                            value={this.state.idioma}
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="Xpress">
+                                                    Xpress
+                                                </option>
+                                                <option value="Profesional">
+                                                    Profesional
+                                                </option>
+                                                <option value="Premium">
+                                                    Premium
+                                                </option>
+                                                <option value="Enterprise">
+                                                    Enterprise
+                                                </option>
+                                                <option value="MCC">
+                                                    MCC
+                                                </option>
+                                            </Select>
+                                            <Select
+                                                id="5"
+                                                name="idioma"
+                                                label="Idioma"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                options={{
+                                                    classes: '',
+                                                    dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                    }
+                                                }}
+                                                value={this.state.idioma}
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="English">
-                                                English
-                                            </option>
-                                            <option value="Spanish">
-                                                Spanish
-                                            </option>
-                                            <option value="Russian">
-                                                Russian
-                                            </option>
-                                            <option value="Japanese">
-                                                Japanese
-                                            </option>
-                                            <option value="Turkish">
-                                                Turkish
-                                            </option>
-                                            <option value="Ukranian">
-                                                Ukranian
-                                            </option>
-                                            <option value="Chinese">
-                                                Chinese
-                                            </option>
-                                            <option value="Portuguese BR">
-                                                Portuguese BR
-                                            </option>
-                                        </Select>
-                                        <Select
-                                            id="6"
-                                            name="rol"
-                                            label="Escoja sus roles"
-                                            multiple={false}
-                                            onChange={this.handleChange}
-                                            options={{
-                                                classes: '',
-                                                dropdownOptions: {
-                                                    alignment: 'left',
-                                                    autoTrigger: true,
-                                                    closeOnClick: true,
-                                                    constrainWidth: true,
-                                                    coverTrigger: true,
-                                                    hover: false,
-                                                    inDuration: 150,
-                                                    onCloseEnd: null,
-                                                    onCloseStart: null,
-                                                    onOpenEnd: null,
-                                                    onOpenStart: null,
-                                                    outDuration: 250
-                                                }
-                                            }}
-                                            value={this.state.rol}
-                                        >
-                                            <option
-                                                disabled
-                                                value=""
-                                                defaultChecked
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="English">
+                                                    English
+                                                </option>
+                                                <option value="Spanish">
+                                                    Spanish
+                                                </option>
+                                                <option value="Russian">
+                                                    Russian
+                                                </option>
+                                                <option value="Japanese">
+                                                    Japanese
+                                                </option>
+                                                <option value="Turkish">
+                                                    Turkish
+                                                </option>
+                                                <option value="Ukranian">
+                                                    Ukranian
+                                                </option>
+                                                <option value="Chinese">
+                                                    Chinese
+                                                </option>
+                                                <option value="Portuguese BR">
+                                                    Portuguese BR
+                                                </option>
+                                            </Select>
+                                            <Select
+                                                id="6"
+                                                name="rol"
+                                                label="Roles"
+                                                multiple={false}
+                                                onChange={this.handleChange}
+                                                options={{
+                                                    classes: '',
+                                                    dropdownOptions: {
+                                                        alignment: 'left',
+                                                        autoTrigger: true,
+                                                        closeOnClick: true,
+                                                        constrainWidth: true,
+                                                        coverTrigger: true,
+                                                        hover: false,
+                                                        inDuration: 150,
+                                                        onCloseEnd: null,
+                                                        onCloseStart: null,
+                                                        onOpenEnd: null,
+                                                        onOpenStart: null,
+                                                        outDuration: 250
+                                                    }
+                                                }}
+                                                value={this.state.rol}
                                             >
-                                                Escoja una opción
-                                            </option>
-                                            <option value="Servidor de Configuración">
-                                                Servidor de Configuración
-                                            </option>
-                                            <option value="Servidor Periférico">
-                                                Servidor Periférico
-                                            </option>
-                                            <option value="Servido de Failover">
-                                                Servido de Failover
-                                            </option>
-                                        </Select>
+                                                <option
+                                                    disabled
+                                                    value=""
+                                                    defaultChecked
+                                                >
+                                                    Escoja una opción
+                                                </option>
+                                                <option value="Servidor de Configuración">
+                                                    Servidor de Configuración
+                                                </option>
+                                                <option value="Servidor Periférico">
+                                                    Servidor Periférico
+                                                </option>
+                                                <option value="Servido de Failover">
+                                                    Servido de Failover
+                                                </option>
+                                            </Select>
+                                        </form>
                                     </div>
-
                                 </div>
+
+                                <h5 class="center-align">Cantidad de Licencias</h5>
+
                                 <div className="row">
                                     <div className="input-field col s6">
                                         <label>Cámaras físicas (licencia por IP)</label>
@@ -714,9 +722,16 @@ class App extends Component {
                                         <input name="integracion_reconocimiento_facial" onChange={this.handleChange} placeholder="Ingrese cantidad" value={this.state.integracion_reconocimiento_facial} type="number"></input>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn light-blue darken-4">
-                                    Registrar
-                                </button>
+                                <div>
+                                    <h5 class="center-align">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+                                            <i class="material-icons right">
+                                                send
+                                            </i>
+                                        </button> 
+                                    </h5>              
+                                </div>
+                                   
                             </form>
                         </div>
                         <div className="col s7">
